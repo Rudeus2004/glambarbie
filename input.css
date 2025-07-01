@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+.custom {
+  @apply w-full min-h-screen bg-cover bg-center bg-no-repeat;
+}
+
+.pacifico {
+ font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.glitter-text {
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #ff69b4,
+    0 0 20px #ff69b4,
+    0 0 40px #ff1493; /* deeper hot pink */
+  animation: shimmer 0.50s infinite alternate;
+}
+
+@keyframes shimmer {
+  from {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #ff69b4,
+      0 0 20px #ff69b4,
+      0 0 40px #ff1493;
+  }
+  to {
+    text-shadow:
+      0 0 10px #fff,
+      0 0 20px #ff69b4,
+      0 0 30px #ff69b4,
+      0 0 60px #ff1493;
+  }
+}
