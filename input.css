@@ -10,6 +10,18 @@
   font-style: normal;
 }
 
+.baby-regular {
+  font-family: "Oooh Baby", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.banger-regular {
+  font-family: "Bangers", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 .glitter-text {
   text-shadow:
     0 0 5px #fff,
@@ -35,3 +47,56 @@
       0 0 60px #ff1493;
   }
 }
+
+.glitter-text2 {
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #ff69b4,
+    0 0 20px #ff69b4,
+    0 0 40px #ff1493; /* deeper hot pink */
+  animation: shimmer2 5s infinite alternate;
+}
+
+@keyframes shimmer2 {
+  from {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #ff69b4,
+      0 0 20px #ff69b4,
+      0 0 40px #ff1493;
+  }
+  to {
+    text-shadow:
+      0 0 10px #fff,
+      0 0 20px #ff69b4,
+      0 0 30px #ff69b4,
+      0 0 60px #ff1493;
+  }
+}
+
+.glow-animated {
+  position: relative;
+  z-index: 1;
+}
+
+.glow-animated::before {
+  content: "";
+  position: absolute;
+  top: -5px; left: -5px; right: -5px; bottom: -5px;
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  z-index: -1;
+  filter: blur(10px);
+  animation: glowRotate 5s linear infinite;
+}
+
+@keyframes glowRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.neon-box {
+  background: #000;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
